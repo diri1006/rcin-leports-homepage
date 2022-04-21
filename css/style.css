@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro';
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1D1D;
+    padding: 8px 12px;
+}
+
+.navbar__logo {
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 12px;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding: 8px 16px;
+}
+
+.navbar__menu li:hover {
+    background-color: rgba(207, 216, 224, 0.479);
+    border-radius: 4px;
+}
+
+.navbar__toggleBtn2 {
+    position: absolute;
+    right: 72px;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+.navbar__toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: aliceblue;
+
+}
+
+.navbar__icons {
+    display: none;
+    list-style: none;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    padding-left: 20px;
+}
+
+.navbar__icons li {
+    padding: 8px 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__icons {
+        display: block;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .navbar__toggleBtn {
+        display: block;
+    }
+
+    .navbar__toggleBtn2 li {
+        padding: 12px 24px;
+    }
+
+    .navbar__menu.active,
+    .navbar__icons,:active {
+        display: flex;
+    }
+}
